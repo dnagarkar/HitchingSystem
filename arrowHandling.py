@@ -103,23 +103,25 @@ track= pygame.image.load("track.png")
 track_rect= track.get_rect()
 track_rect.y= height - track_rect.height*.5 - tractor_rect.height
 track_rect.x= (width/2)- (track_rect.width/2)
-
+trackAngle = 0
 i= 0
 while 1:
   for event in pygame.event.get():
     if event.type == pygame.QUIT: sys.exit()
 
-  tractor_rect= tractor_rect.move(speed)
+  #tractor_rect= tractor_rect.move(speed)
   if event.type == pygame.KEYDOWN:
     if event.key == pygame.K_LEFT:
       print('left')
       baler_rect= moveleft(baler_rect)
+      trackAngle = trackAngle + 10
     elif event.key == pygame.K_RIGHT:
       print('right')
       baler_rect= moveright(baler_rect)
+      trackAngle = trackAngle - 10
   baler_rect= baler_rect.move(baler_speed)
-  track_rect= track_rect.move(speed)
-  track1= rot_center(track, -i) #rotates 
+  #track_rect= track_rect.move(speed)
+  track1= rot_center(track, trackAngle) #rotates 
   screen.fill(white)
   screen.blit(tractor, tractor_rect)
   screen.blit(baler, baler_rect)
