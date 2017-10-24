@@ -42,7 +42,7 @@ def distance(GPIO_TRIGGER, GPIO_ECHO):
     distance = (TimeElapsed * 34300) / 2
  
     return distance
-
+error= 5
 
 DIST_LEFT = distance(TRIG_LEFT, ECHO_LEFT)
 DIST_RIGHT = distance(TRIG_RIGHT, ECHO_RIGHT)
