@@ -48,8 +48,8 @@ DIST_LEFT = distance(TRIG_LEFT, ECHO_LEFT)
 DIST_RIGHT = distance(TRIG_RIGHT, ECHO_RIGHT)
 
 if(math.abs(DIST_LEFT - DIST_RIGHT) <= error):
-    print “move forward”
+    print "move forward"
 else if(DIST_LEFT <= DIST_RIGHT + error):
-    print “turn left”
+    print "“turn left”"
 else:
-    print “turn right”
+    print "“turn right”"
