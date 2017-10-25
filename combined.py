@@ -108,26 +108,31 @@ while(1):
 	DIST_RIGHT = distance(TRIG_RIGHT, ECHO_RIGHT)
 	if abs(DIST_LEFT - DIST_RIGHT) <= error:
    		print "move forward"
+   		tractor_rect, track_rect= moveup(tractor_rect, track_rect)
    	elif DIST_LEFT <= DIST_RIGHT + error:
-   		print "turn left"
+   		print('left')
+  		baler_rect= moveleft(baler_rect)
+  		trackAngle = trackAngle + 10
    	else:
-   		print "turn right"
+   		print('right')
+   		baler_rect= moveright(baler_rect)
+   		trackAngle = trackAngle - 10
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT: sys.exit()
 
 	#tractor_rect= tractor_rect.move(speed)
-	if event.type == pygame.KEYDOWN:
-  		if event.key == pygame.K_LEFT:
-  			print('left')
-  			baler_rect= moveleft(baler_rect)
-  			trackAngle = trackAngle + 10
-  		elif event.key == pygame.K_RIGHT:
-  			print('right')
-  			baler_rect= moveright(baler_rect)
-  			trackAngle = trackAngle - 10
-  		if event.key == pygame.K_UP:
-  			print('up')
-  			tractor_rect, track_rect= moveup(tractor_rect, track_rect)
+	#if event.type == pygame.KEYDOWN:
+  	#	if event.key == pygame.K_LEFT:
+  	#		print('left')
+  	#		baler_rect= moveleft(baler_rect)
+  	#		trackAngle = trackAngle + 10
+  	#	elif event.key == pygame.K_RIGHT:
+  	#		print('right')
+  	#		baler_rect= moveright(baler_rect)
+  	#		trackAngle = trackAngle - 10
+  	#	if event.key == pygame.K_UP:
+  	#		print('up')
+  	#		tractor_rect, track_rect= moveup(tractor_rect, track_rect)
 	#baler_rect= baler_rect.move(baler_speed)
 	track_rect= track_rect.move(speed)
 	tractor_rect= tractor_rect.move(speed)
