@@ -146,15 +146,15 @@ while(1):
    		if event.type == pygame.QUIT: sys.exit()
 
 	#tractor_rect= tractor_rect.move(speed)
-  	if event.type == pygame.KEYDOWN:
-    	if event.key == pygame.K_LEFT:
-      		print('left')
-      		baler_rect= moveleft(baler_rect)
-      		trackAngle = trackAngle + 10
-    	elif event.key == pygame.K_RIGHT:
-      		print('right')
-      		baler_rect= moveright(baler_rect)
-      		trackAngle = trackAngle - 10
+	if event.type == pygame.KEYDOWN:
+		if event.key == pygame.K_LEFT:
+			print('left')
+			baler_rect= moveleft(baler_rect)
+			trackAngle = trackAngle + 10
+		elif event.key == pygame.K_RIGHT:
+			print('right')
+			baler_rect= moveright(baler_rect)
+			trackAngle = trackAngle - 10
     	if event.key == pygame.K_UP:
       		print('up')
       		tractor_rect, track_rect= moveup(tractor_rect, track_rect)
