@@ -74,7 +74,7 @@ def distance(GPIO_TRIGGER, GPIO_ECHO):
  
     return distance
 
-error= 5
+error= 10
 
 
 pygame.init()
