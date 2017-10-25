@@ -74,35 +74,6 @@ def distance(GPIO_TRIGGER, GPIO_ECHO):
  
     return distance
 
-def moveright(baler_rect):
-  #move baler left
-  baler_rect= baler_rect.move([-15, 0])
-  # screen.blit(baler, baler_rect)
-  return baler_rect
-  #rotate lines to right
-
-def moveleft(baler_rect):
-  #move baler right
-  baler_rect= baler_rect.move([15, 0])
-  return baler_rect
-  # screen.blit(baler, baler_rect)
-
-def moveup(tractor_rect, track_rect):
-  #move baler right
-  tractor_rect= tractor_rect.move([0, -5])
-  track_rect= track_rect.move([0, -5])
-
-  return tractor_rect, track_rect
-
-def rot_center(image, angle):
-    """rotate an image while keeping its center and size"""
-    orig_rect = image.get_rect()
-    rot_image = pygame.transform.rotate(image, angle)
-    rot_rect = orig_rect.copy()
-    rot_rect.center = rot_image.get_rect().center
-    rot_image = rot_image.subsurface(rot_rect).copy()
-    return rot_image
-
 error= 5
 
 
