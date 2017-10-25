@@ -104,6 +104,8 @@ trackAngle = 0
 i= 0
 
 while(1):
+	DIST_LEFT = distance(TRIG_LEFT, ECHO_LEFT)
+	DIST_RIGHT = distance(TRIG_RIGHT, ECHO_RIGHT)
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT: sys.exit()
 
