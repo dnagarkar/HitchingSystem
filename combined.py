@@ -141,7 +141,7 @@ while(1):
    	elif DIST_LEFT <= DIST_RIGHT + error:
    		print "turn left"
    	else:
-    	print "turn right"
+   		print "turn right"
    	for event in pygame.event.get():
    		if event.type == pygame.QUIT: sys.exit()
 
