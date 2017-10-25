@@ -33,8 +33,8 @@ def moveleft(baler_rect):
 
 def moveup(tractor_rect, track_rect):
   #move baler right
-  tractor_rect= tractor_rect.move([0, -5])
-  track_rect= track_rect.move([0, -5])
+  tractor_rect= tractor_rect.move([0, -1])
+  track_rect= track_rect.move([0, -1])
 
   return tractor_rect, track_rect
 
